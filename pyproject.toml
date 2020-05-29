@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lyra-orm"
-version = "0.2.4"
+version = "0.2.5"
 description = "A ORM for lyra database, with models, schema and more."
 authors = ["Eric Souza <ericsouza0801@gmail.com>"]
 
