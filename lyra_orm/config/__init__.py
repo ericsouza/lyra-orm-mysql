@@ -9,7 +9,9 @@ if "sqlite" in environ.get("DATABASE_URL"):
         environ.get("DATABASE_URL"), connect_args={"check_same_thread": False},
     )
 else:
-    engine = create_engine(environ.get("DATABASE_URL"), pool_recycle=50)
+    engine = create_engine(
+        environ.get("DATABASE_URL"), pool_recycle=50, pool_pre_ping=True
+    )
 
 
 Session = sessionmaker(bind=engine)
